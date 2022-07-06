@@ -27,7 +27,7 @@ function activateMenuAtCurrentSection(section) {
   const sectionTopReachedOrPassedTargetLine = targetLine >= sectionTop
 
   //informações dos dados e da lógica
-  console.log('O topo da seção chegou ou passou da linha?', sectionTopReachedOrPassedTargetLine)
+  //console.log('O topo da seção chegou ou passou da linha?', sectionTopReachedOrPassedTargetLine)
 
 
 
@@ -39,7 +39,7 @@ function activateMenuAtCurrentSection(section) {
 
   const sectionEndPassedTargetLine = sectionEndsAt <= targetLine
 
-  console.log('O fundo da seção passou da linha?', sectionEndPassedTargetLine)
+  //console.log('O fundo da seção passou da linha?', sectionEndPassedTargetLine)
 
 
   // limites da seção
@@ -57,22 +57,8 @@ function activateMenuAtCurrentSection(section) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function showNavOnScroll() {
+  const navigation = document.getElementById('navigation');
   if(scrollY > 0) {
     navigation.classList.add('scroll')
   } else {
@@ -81,6 +67,7 @@ function showNavOnScroll() {
 }
 
 function showBackToTopButtonOnScroll() {
+  const backToTopButton = document.getElementById('backToTopButton');
   if(scrollY > 500) {
     backToTopButton.classList.add('show')
   } else {
